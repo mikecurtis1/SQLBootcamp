@@ -64,7 +64,8 @@ docker build -t postgres-dev .
 * `docker build` is an alias for `docker image build`
 * `-t` tag for image
 * `.` is the path
-* By default Docker looks for a file named `Dockerfile`, but there is an option of specify another file name with the `-f` flag
+* By default Docker looks for a file named `Dockerfile`, but there is an option to specify another file name with the `-f` flag
+* As this is only a dev demo, not production, we will use `root` for `POSTGRES_PASSWORD` rather than a hard password
 
 ### Run image in a container
 
