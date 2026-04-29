@@ -1244,3 +1244,7 @@ When all commentary and output examples are removed we can easily see only a han
 * `\q` quit psql client
 
 ---
+
+Lab 1 establishes the full system—from container to query execution. Future labs will build on this foundation, focusing more on data modeling and query behavior within an already-understood environment.
+
+---
