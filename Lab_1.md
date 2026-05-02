@@ -746,6 +746,39 @@ output
 
 Command
 ```sql
+\d pg_stat_activity;
+```
+Output
+```
+                      View "pg_catalog.pg_stat_activity"
+      Column      |           Type           | Collation | Nullable | Default
+------------------+--------------------------+-----------+----------+---------
+ datid            | oid                      |           |          |
+ datname          | name                     |           |          |
+ pid              | integer                  |           |          |
+ leader_pid       | integer                  |           |          |
+ usesysid         | oid                      |           |          |
+ usename          | name                     |           |          |
+ application_name | text                     |           |          |
+ client_addr      | inet                     |           |          |
+ client_hostname  | text                     |           |          |
+ client_port      | integer                  |           |          |
+ backend_start    | timestamp with time zone |           |          |
+ xact_start       | timestamp with time zone |           |          |
+ query_start      | timestamp with time zone |           |          |
+ state_change     | timestamp with time zone |           |          |
+ wait_event_type  | text                     |           |          |
+ wait_event       | text                     |           |          |
+ state            | text                     |           |          |
+ backend_xid      | xid                      |           |          |
+ backend_xmin     | xid                      |           |          |
+ query_id         | bigint                   |           |          |
+ query            | text                     |           |          |
+ backend_type     | text                     |           |          |
+```
+
+Command
+```sql
 SELECT datname, usename, application_name, client_addr, backend_start, state FROM pg_stat_activity;
 ```
 output
